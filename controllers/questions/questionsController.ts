@@ -406,13 +406,13 @@ export const submitQuestions = async (
   console.log(lavel, topic);
   const data = req.body;
   try {
-    const sloved = await prisma.solvedQuestion.create({
-      data: {
-        isCorrect: true,
-        questionId: "",
-        userId: req!.user.id,
-      },
-    });
+    // const sloved = await prisma.solvedQuestion.create({
+    //   data: {
+    //     isCorrect: true,
+    //     questionId: "",
+    //     userId: req!.user.id,
+    //   },
+    // });
     res.status(200).json({
       data: {
         data: await prisma.question.findMany({
@@ -439,12 +439,12 @@ export const levelsQuestions = async (
   const { lavel, topic } = req.query;
   console.log(lavel, topic);
   try {
-    const slovedLevels = await prisma.solvedQuestion.findMany({
-      where: {
-        userId: req!.user.id,
-        question: { topicsId: { has: topic?.toString() } },
-      },
-    });
+    // const slovedLevels = await prisma.solvedQuestion.findMany({
+    //   where: {
+    //     userId: req!.user.id,
+    //     question: { topicsId: { has: topic?.toString() } },
+    //   },
+    // });
     res.status(200).json({
       data: {
         data: await prisma.question.findMany({
