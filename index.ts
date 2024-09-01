@@ -19,7 +19,6 @@ const publicPath = path.join(__dirname, '..', 'public');
 // Serve static files from the 'public' directory
 app.use(express.static(publicPath));
 // Set up the default route to serve the HTML file
-// Set up the default route to serve the HTML file
 app.get('/', (req: Request, res: Response) => {
   res.sendFile(path.join(publicPath, 'index.html'), (err) => {
     if (err) {
@@ -38,15 +37,11 @@ app.get('/privacy-policy', (req: Request, res: Response) => {
 });
 
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("<h2>Salon server is working</h2>");
-});
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/question", questionsRoutes);
-// app.use("/api", salonRoutes);
 
-app.use("/uploads", express.static("uploads"));
 
 // global.appRoot : any = path.resolve(path.resolve());
 
