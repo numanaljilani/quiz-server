@@ -2,9 +2,9 @@
 import express from "express";
 const app = express();
 
-import authRoutes from "./routes/authRoutes.js";
-import questionsRoutes from "./routes/questionsRoutes.js";
-import errorHandler from "./middlewares/errorHandler.js";
+// import authRoutes from "./routes/authRoutes.js";
+// import questionsRoutes from "./routes/questionsRoutes.js";
+// import errorHandler from "./middlewares/errorHandler.js";
 
 
 import cors from "cors"
@@ -43,13 +43,13 @@ app.get('/privacy-policy', (req, res) => {
 
 
 
-app.use("/api/auth", authRoutes);
-app.use("/api/question", questionsRoutes);
+// app.use("/api/auth", authRoutes);
+// app.use("/api/question", questionsRoutes);
 
 
 // global.appRoot : any = path.resolve(path.resolve());
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
