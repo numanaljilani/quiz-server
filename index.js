@@ -2,9 +2,9 @@
 import express from "express";
 const app = express();
 
-import authRoutes from "./routes/authRoutes.js";
-import questionsRoutes from "./routes/questionsRoutes.js";
-import errorHandler from "./middlewares/errorHandler.js";
+// import authRoutes from "./routes/authRoutes.js";
+// import questionsRoutes from "./routes/questionsRoutes.js";
+// import errorHandler from "./middlewares/errorHandler.js";
 
 
 import cors from "cors"
@@ -19,12 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define the path to the static HTML file
 const publicPath = path.join(dirname('public'), 'public');
-console.log(dirname('public'))
+// console.log(dirname('public'))
 // Serve static files from the 'public' directory
 app.use(express.static(publicPath));
 // Set up the default route to serve the HTML file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'), (err) => {
+  res.sendFile('./index.html', (err) => {
     if (err) {
       console.error('Error sending file:', err);
       res.status(500).send({ message: 'Internal server error' });
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
   });
 });
 app.get('/privacy-policy', (req, res) => {
-  res.sendFile(path.join(publicPath, 'privacy.html'), (err) => {
+  res.sendFile('./privacy.html', (err) => {
     if (err) {
       console.error('Error sending file:', err);
       res.status(500).send({ message: 'Internal server error' });
@@ -49,7 +49,7 @@ app.get('/privacy-policy', (req, res) => {
 
 // global.appRoot : any = path.resolve(path.resolve());
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
