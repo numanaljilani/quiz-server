@@ -1,5 +1,5 @@
-// const express = require('express')
-import express from "express";
+const express = require('express')
+// import express from "express";
 const app = express();
 
 // import authRoutes from "./routes/authRoutes.js";
@@ -7,9 +7,8 @@ const app = express();
 // import errorHandler from "./middlewares/errorHandler.js";
 
 
-import cors from "cors"
-import path from "path"
-import { dirname } from 'path';
+// import cors from "cors"
+const cors = require("cors")
 
 app.use(express.json());
 app.use(cors())
