@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "prisma generate && node index.js",
-    "build": "prisma generate",
+    "postinstall": "prisma generate",
+    "build": "npx prisma generate && npm install",
     "dev": "nodemon index.js"
   },
   "keywords": [],
