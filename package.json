@@ -7,15 +7,8 @@
   "scripts": {
     "start": "prisma generate && node index.js",
     "build": "prisma generate",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
     "dev": "nodemon index.js"
   },
-  "pre-commit": [
-      "ts.check",
-      "build",
-      "add-build"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
