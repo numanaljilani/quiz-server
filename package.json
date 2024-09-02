@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "prisma generate && node dist/index.js",
-    "build": "rimraf dist && tsc",
+    "start": "prisma generate && node index.js",
+    "build": "prisma generate",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "dev": "nodemon index.js"
