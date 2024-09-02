@@ -18,10 +18,10 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 
 // Define the path to the static HTML file
-const publicPath = path.join(dirname('public'), 'public');
+// const publicPath = path.join(dirname('public'), 'public');
 // console.log(dirname('public'))
 // Serve static files from the 'public' directory
-app.use(express.static(publicPath));
+app.use(express.static("./public"));
 // Set up the default route to serve the HTML file
 app.get('/', (req, res) => {
   res.sendFile('./index.html', (err) => {
