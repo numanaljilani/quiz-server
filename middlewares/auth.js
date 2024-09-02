@@ -1,5 +1,5 @@
-import CustomErrorHandler from "../services/error/CustomErrorHandler";
-import JwtService from "../services/jwt/JwtService";
+import CustomErrorHandler from "../services/error/CustomErrorHandler.js";
+import JwtService from "../services/jwt/JwtService.js";
 
 export const isAuthenticated = async (
   req,

@@ -1,5 +1,4 @@
-import { Request, Response, NextFunction } from "express";
-import CustomErrorHandler from "../../services/error/CustomErrorHandler";
+import CustomErrorHandler from "../../services/error/CustomErrorHandler.js";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

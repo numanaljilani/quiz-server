@@ -1,9 +1,8 @@
-import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
 import { PrismaClient } from "@prisma/client";
-import CustomErrorHandler from "../../services/error/CustomErrorHandler";
+import CustomErrorHandler from "../../services/error/CustomErrorHandler.js";
 import bcrypt from "bcrypt";
-import JwtService from "../../services/jwt/JwtService";
+import JwtService from "../../services/jwt/JwtService.js";
 
 const prisma = new PrismaClient();
 

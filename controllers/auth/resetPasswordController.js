@@ -1,4 +1,3 @@
-import { Request, Response, NextFunction } from "express";
 import bcrypt from "bcrypt";
 import Joi from "joi";
 import { PrismaClient } from "@prisma/client";

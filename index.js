@@ -1,11 +1,15 @@
-const express = require('express')
+// const express = require('express')
+import express from "express";
 const app = express();
 
-// import authRoutes from "./routes/authRoutes";
-// import questionsRoutes from "./routes/questionsRoutes";
-// import errorHandler from "./middlewares/errorHandler";
-const cors = require('cors')
-const path = require('path')
+import authRoutes from "./routes/authRoutes.js";
+import questionsRoutes from "./routes/questionsRoutes.js";
+import errorHandler from "./middlewares/errorHandler.js";
+
+
+import cors from "cors"
+import path from "path"
+import { dirname } from 'path';
 
 app.use(express.json());
 app.use(cors())
@@ -14,7 +18,8 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 
 // Define the path to the static HTML file
-const publicPath = path.join(__dirname, 'public');
+const publicPath = path.join(dirname('public'), 'public');
+console.log(dirname('public'))
 // Serve static files from the 'public' directory
 app.use(express.static(publicPath));
 // Set up the default route to serve the HTML file
@@ -38,13 +43,13 @@ app.get('/privacy-policy', (req, res) => {
 
 
 
-// app.use("/api/auth", authRoutes);
-// app.use("/api/question", questionsRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/question", questionsRoutes);
 
 
 // global.appRoot : any = path.resolve(path.resolve());
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 

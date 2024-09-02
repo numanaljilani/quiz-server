@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "prisma generate && node dist/index.js",
     "build": "rimraf dist && tsc",

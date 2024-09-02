@@ -1,9 +1,8 @@
 import express from "express";
-import signup from "../controllers/auth/signupController";
-import { login, me } from "../controllers/auth/loginController";
-import { resetpassword } from "../controllers/auth/resetPasswordController";
-import { isAuthenticated } from "../middlewares/auth";
-import { MiddlewareInterface } from "../interfaces";
+import signup from "../controllers/auth/signupController.js";
+import { login, me } from "../controllers/auth/loginController.js";
+import { resetpassword } from "../controllers/auth/resetPasswordController.js";
+import { isAuthenticated } from "../middlewares/auth.js";
 // import { sendOTP, verifyOTP } from "../controllers/auth/otpController";
 
 const router = express.Router();

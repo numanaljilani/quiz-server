@@ -1,9 +1,9 @@
 import express from "express";
-import signup from "../controllers/auth/signupController";
-import { login } from "../controllers/auth/loginController";
-import { resetpassword } from "../controllers/auth/resetPasswordController";
-import { isAuthenticated } from "../middlewares/auth";
-import { addCloudServiceProviders, addCloudServiceProvidersSections, addCloudServiceProvidersSectionsTopics, addExams, addQuestions, getCloudServiceProviders, getCloudServiceProvidersSections, getCloudServiceProvidersSectionsTopics, getLevels, getQuestions } from "../controllers/questions/questionsController";
+import signup from "../controllers/auth/signupController.js";
+import { login } from "../controllers/auth/loginController.js";
+import { resetpassword } from "../controllers/auth/resetPasswordController.js";
+import { isAuthenticated } from "../middlewares/auth.js";
+import { addCloudServiceProviders, addCloudServiceProvidersSections, addCloudServiceProvidersSectionsTopics, addExams, addQuestions, getCloudServiceProviders, getCloudServiceProvidersSections, getCloudServiceProvidersSectionsTopics, getLevels, getQuestions } from "../controllers/questions/questionsController.js";
 // import { sendOTP, verifyOTP } from "../controllers/auth/otpController";
 
 const router = express.Router();
